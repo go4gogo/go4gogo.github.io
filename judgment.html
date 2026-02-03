@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Court of Judicature at 1603</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Verdana', 'Tahoma', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 14px;
+        }
+        .top-bar {
+            background-color: #e0e0e0;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 20px;
+            text-align: right;
+            font-size: 11px;
+        }
+        .top-bar a { text-decoration: none; color: #333; margin-left: 10px; }
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 4px solid #b30000;
+            background-image: linear-gradient(#ffffff, #e6f2ff);
+        }
+        .header img {
+            height: 80px;
+            margin-right: 20px;
+        }
+        .header-text h1 {
+            margin: 0;
+            color: #004080;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        .header-text h2 {
+            margin: 5px 0 0;
+            color: #b30000;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .navbar {
+            background-color: #004080;
+            color: white;
+            padding: 0 20px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar li { float: left; }
+        .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-right: 1px solid #0059b3;
+            font-weight: bold;
+        }
+        .navbar li a:hover { background-color: #0059b3; }
+        .marquee-container {
+            background-color: #ffcccc;
+            color: #b30000;
+            border-bottom: 1px solid #cc0000;
+            padding: 8px 0;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sidebar {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            border: 1px solid #ccc;
+            margin-right: 20px;
+            height: fit-content;
+        }
+        .sidebar-header {
+            background: #004080;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar li { border-bottom: 1px solid #eee; }
+        .sidebar li a {
+            display: block;
+            padding: 10px;
+            color: #004080;
+            text-decoration: none;
+        }
+        .sidebar li a:hover { background: #f0f8ff; }
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+        .court-order {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 40px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Times New Roman', serif;
+        }
+        .court-order h2, .court-order h3 { text-align: center; }
+        .legal-text { font-size: 16px; line-height: 1.6; text-align: justify; }
+        .btn-download {
+            background-color: #b30000;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        .btn-download:hover { background-color: #800000; }
+        .right-sidebar {
+            flex: 1;
+            min-width: 200px;
+            margin-left: 20px;
+        }
+        .judge-card {
+            background: white;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        .judge-card img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 3px;
+        }
+        .judge-name { font-weight: bold; color: #004080; margin-top: 10px; }
+        .judge-desig { font-size: 11px; color: #555; }
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar, .right-sidebar { margin: 0 0 20px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="#">Skip to Main Content</a> | 
+        <a href="#">Screen Reader Access</a> | 
+        <a href="#">A+</a> <a href="#">A-</a>
+    </div>
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png" alt="Emblem"> 
+        <div class="header-text">
+            <h1>HIGH COURT OF JUDICATURE AT 1603</h1>
+            <h2>(ORIGINAL CUTENESS & SASS JURISDICTION)</h2>
+        </div>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Her Highness</a></li>
+            <li><a href="#">Daily Orders</a></li>
+            <li><a href="#">Case Status (Married)</a></li>
+            <li><a href="#">e-Filing (Snacks)</a></li>
+        </ul>
+    </div>
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            *** NOTIFICATION NO. 30/2026: MS. SHREYA SINGHI TURNS 30. STRICT ORDERS ISSUED TO TREAT HER LIKE A QUEEN. *** || URGENT: SUSHMA NAGARAJ HAS GRANTED IMMUNITY FROM WORK EMAILS. || 
+            *** CAKE CUTTING CEREMONY AT 12:00 HRS ***
+        </marquee>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">QUICK LINKS</div>
+            <ul>
+                <li><a href="#">View Causelist (Chores)</a></li>
+                <li><a href="#">Apply for Bail (Husband)</a></li>
+                <li><a href="#">Judgment Search</a></li>
+                <li><a href="#">Virtual Court (FaceTime)</a></li>
+                <li><a href="#">RTI (Right to Ice-cream)</a></li>
+            </ul>
+            <br>
+            <div class="sidebar-header">IMPORTANT</div>
+            <div style="padding:10px; font-size:12px; color:red;">
+                <b>Warning:</b> Managing Partner is not liable for mood swings caused by hunger or train delays.
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="court-order">
+                <center>
+                    <h3>IN THE HIGH COURT OF JUDICATURE AT 1603</h3>
+                    <h4>WRIT PETITION (L) NO. 30 OF 2026</h4>
+                    <p><i>(Under Article 226 of the Constitution of Adulthood)</i></p>
+                </center>
+                <hr>
+                <p><b>BETWEEN:</b></p>
+                <p><b>SHREYA SINGHI (DODO)</b><br>
+                <i>(Chief Justice of House 1603 & Certified Cutie)</i> ... <b>Petitioner</b></p>
+                <p><b>AND</b></p>
+                <p><b>1. THE CALENDAR (YEAR 2026)</b> ... <b>Respondent No. 1</b><br>
+                <b>2. SUSHMA NAGARAJ (THE BOSS)</b> ... <b>Respondent No. 2</b></p>
+                <hr>
+                <center><h4>ORDER</h4></center>
+                <div class="legal-text">
+                    <p><b>1. The Challenge:</b> The Petitioner (Shreya) has filed this urgent Writ Petition challenging the "Notification of Age" dated today. She contends that she is merely a "Baby" trapped in an adult's timeline and argues that turning 30 is a violation of her Fundamental Right to be a Cutie.</p>
+                    <p><b>2. The 'Sushma' Argument:</b> Respondent No. 2 (Sushma Nagaraj) submitted the "Doctrine of Indispensability," arguing that the office cannot function without Shreya. However, she has graciously agreed to grant a "Stay Order" on all work emails for 24 hours.</p>
+                    <p><b>3. The Verdict:</b> The Court observes that while the number is "30", the Petitioner's vibe is stuck at "Sweet 16". The transition to the 30s is allowed ONLY on the condition that she retains her status as <b>Chief Justice of 1603</b>.</p>
+                    <p><b>ORDERED:</b> The Husband (Piyush) is directed to ensure a continuous supply of snacks. Petition Disposed of with CAKE.</p>
+                </div>
+                <br><br>
+                <p style="text-align: right;">
+                    <b>Sd/-</b><br>
+                    <b>BENCH OF HAPPINESS</b><br>
+                    (Justice DoDo & Justice Sushma)
+                </p>
+                <button class="btn-download" onclick="celebrate()">✅ ACCEPT JUDGMENT & CELEBRATE</button>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="sidebar-header">HON'BLE JUDGES</div>
+            <div class="judge-card">
+                <img src="images/shreya.jpg" alt="Hon'ble DoDo" onerror="this.src='https://via.placeholder.com/150?text=Queen+DoDo'">
+                <div class="judge-name">Hon'ble Justice DoDo</div>
+                <div class="judge-desig">Chief Justice (Home Division)</div>
+            </div>
+            <div class="judge-card">
+                <img src="images/sushma.jpg" alt="Hon'ble Sushma" onerror="this.src='https://via.placeholder.com/150?text=Boss+Sushma'">
+                <div class="judge-name">Hon'ble Justice Sushma</div>
+                <div class="judge-desig">The Enforcer (Work Bench)</div>
+            </div>
+             <div class="judge-card">
+                <img src="images/piyush.jpg" alt="Accused" onerror="this.src='https://via.placeholder.com/150?text=Accused+Piyush'">
+                <div class="judge-name">Accused: Piyush</div>
+                <div class="judge-desig">Status: On Probation</div>
+            </div>
+        </div>
+    </div>
+    <div style="background:#004080; color:white; padding:20px; text-align:center; margin-top:20px; font-size:11px;">
+        Disclaimer: Site Designed & Hosted by Husband Informatics Centre (HIC). <br>
+        Content is property of the Home Ministry (Wife). Any bugs are actually features.<br>
+        © 2026 Government of 1603.
+    </div>
+    <script>
+        function celebrate() {
+            var duration = 5 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+            function randomInOut(min, max) {
+            return Math.random() * (max - min) + min;
+            }
+            var interval = setInterval(function() {
+            var timeLeft = animationEnd - Date.now();
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+            var particleCount = 50 * (timeLeft / duration);
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.1, 0.3), y: Math.random() - 0.2 } }));
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+            alert("ORDER PASSED! \n\nThe Court directs you to have a fantastic Birthday! \n\n- Signed, Piyush");
+        }
+    </script>
+</body>
+</html>
